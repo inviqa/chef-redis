@@ -4,7 +4,7 @@ maintainer_email "miah@cx.com"
 license          "Apache 2.0"
 description      "Installs/configures redis"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.0.3"
+version          "1.0.4"
 
 recipe "redis::_group", "Creates a group for Redis."
 recipe "redis::_server_config", "Creates configuration directories and installs templatized redis.conf."
@@ -23,6 +23,6 @@ recipe "redis::server_source", "Uses the recipe crumbs in the Redis cookbook to 
   supports os
 end
 
-%w[ build-essential runit yum ].each do |cookbook|
+%w[ build-essential runit ].each do |cookbook|
   depends cookbook
 end

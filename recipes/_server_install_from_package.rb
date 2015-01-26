@@ -5,9 +5,6 @@
 case node.platform
 when "debian", "ubuntu"
   pkg = "redis-server"
-when "redhat", "centos", "scientific", "fedora"
-  include_recipe "yum::epel"
-  pkg = "redis"
 else
   pkg = "redis"
 end
