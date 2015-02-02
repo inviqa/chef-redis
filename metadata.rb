@@ -4,7 +4,7 @@ maintainer_email "miah@cx.com"
 license          "Apache 2.0"
 description      "Installs/configures redis"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.0.4"
+version          "1.0.5"
 
 recipe "redis::_group", "Creates a group for Redis."
 recipe "redis::_server_config", "Creates configuration directories and installs templatized redis.conf."
